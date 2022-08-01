@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="1" result="Failed" label="Error" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.15.0.0" clr-version="4.0.30319.42000" start-time="2022-03-25 13:09:30Z" end-time="2022-03-25 13:09:31Z" duration="0.316873">
+  <command-line><![CDATA["C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe"  C:\Users\Thirumala_Rajolu\source\git\Repos\specflowsaucedemoproject\ProjectBDDTestframeWork\bin\Debug\net6.0\ProjectBDDTestframeWork.dll]]></command-line>
+  <test-suite type="Assembly" id="0" name="" fullname="" runstate="NotRunnable" testcasecount="1" result="Failed" label="Error" start-time="2022-03-25 13:09:31Z" end-time="2022-03-25 13:09:31Z" duration="0.001" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <failure>
+      <message><![CDATA[NUnit.Engine.NUnitEngineException : Remote test agent exited with non-zero exit code 1]]></message>
+      <stack-trace><![CDATA[--NUnitEngineException
+Remote test agent exited with non-zero exit code 1
+   at NUnit.Engine.Services.TestAgency.OnAgentExit(Process process, Guid agentId)
+   at NUnit.Engine.Services.TestAgency.<>c__DisplayClass13_0.<GetAgent>b__0(Object sender, EventArgs e)
+   at System.Diagnostics.Process.OnExited()
+   at System.Diagnostics.Process.RaiseOnExited()
+   at System.Diagnostics.Process.get_HasExited()
+   at NUnit.Engine.Services.TestAgency.GetAgent(TestPackage package)
+   at NUnit.Engine.Runners.ProcessRunner.CreateAgentAndRunnerIfNeeded()
+   at NUnit.Engine.Runners.ProcessRunner.RunTests(ITestEventListener listener, TestFilter filter)
+]]></stack-trace>
+    </failure>
+  </test-suite>
+</test-run>

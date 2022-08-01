@@ -1,0 +1,67 @@
+InternalTrace: Initializing at level Debug
+23:09:47.194 Debug [ 1] ServiceManager: Added SettingsService
+23:09:47.194 Debug [ 1] ServiceManager: Added RecentFilesService
+23:09:47.194 Debug [ 1] ServiceManager: Added TestFilterService
+23:09:47.196 Debug [ 1] ServiceManager: Added ExtensionService
+23:09:47.196 Debug [ 1] ServiceManager: Added ProjectService
+23:09:47.196 Debug [ 1] ServiceManager: Added RuntimeFrameworkService
+23:09:47.226 Debug [ 1] ServiceManager: Added TestAgency
+23:09:47.226 Debug [ 1] ServiceManager: Added DriverService
+23:09:47.226 Debug [ 1] ServiceManager: Added ResultService
+23:09:47.227 Debug [ 1] ServiceManager: Added DefaultTestRunnerFactory
+23:09:47.229 Info  [ 1] ServiceManager: Initializing SettingsService
+23:09:47.232 Info  [ 1] ServiceManager: Initializing RecentFilesService
+23:09:47.236 Debug [ 1] ServiceManager: Request for service ISettings satisfied by SettingsService
+23:09:47.237 Info  [ 1] ServiceManager: Initializing TestFilterService
+23:09:47.237 Info  [ 1] ServiceManager: Initializing ExtensionService
+23:09:47.242 Info  [ 1] ExtensionService: Scanning nunit.engine.core assembly for extension points
+23:09:47.243 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/NUnitV2Driver, Type=NUnit.Engine.Extensibility.IFrameworkDriver
+23:09:47.262 Info  [ 1] ExtensionService: Scanning nunit.engine.api assembly for extension points
+23:09:47.263 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IService, Type=NUnit.Engine.IService
+23:09:47.263 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/ITestEventListener, Type=NUnit.Engine.ITestEventListener
+23:09:47.263 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IDriverFactory, Type=NUnit.Engine.Extensibility.IDriverFactory
+23:09:47.263 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IProjectLoader, Type=NUnit.Engine.Extensibility.IProjectLoader
+23:09:47.263 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IResultWriter, Type=NUnit.Engine.Extensibility.IResultWriter
+23:09:47.276 Info  [ 1] ExtensionService: Processing file C:\Program Files (x86)\NUnit.org\nunit-console\nunit.bundle.addins
+23:09:47.498 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\nunit.v2.driver.dll for Extensions
+23:09:47.527 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type NUnit2FrameworkDriver
+23:09:47.541 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\nunit-v2-result-writer.dll for Extensions
+23:09:47.542 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type NUnit2XmlResultWriter
+23:09:47.549 Info  [ 1] ExtensionService:         ExtensionProperty Format = nunit2
+23:09:47.550 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\nunit-project-loader.dll for Extensions
+23:09:47.551 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type NUnitProjectLoader
+23:09:47.551 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .nunit
+23:09:47.551 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\vs-project-loader.dll for Extensions
+23:09:47.553 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type VisualStudioProjectLoader
+23:09:47.553 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .sln
+23:09:47.553 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .csproj
+23:09:47.553 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .vbproj
+23:09:47.553 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .vjsproj
+23:09:47.553 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .vcproj
+23:09:47.553 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .fsproj
+23:09:47.553 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\teamcity-event-listener.dll for Extensions
+23:09:47.561 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type TeamCityEventListener
+23:09:47.562 Info  [ 1] ServiceManager: Initializing ProjectService
+23:09:47.564 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:09:47.568 Info  [ 1] ServiceManager: Initializing RuntimeFrameworkService
+23:09:47.569 Info  [ 1] ServiceManager: Initializing TestAgency
+23:09:47.569 Debug [ 1] ServiceManager: Request for service IRuntimeFrameworkService satisfied by RuntimeFrameworkService
+23:09:47.591 Info  [ 1] ServiceManager: Initializing DriverService
+23:09:47.594 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:09:47.596 Info  [ 1] ServiceManager: Initializing ResultService
+23:09:47.597 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:09:47.597 Info  [ 1] ServiceManager: Initializing DefaultTestRunnerFactory
+23:09:47.598 Debug [ 1] ServiceManager: Request for service IProjectService satisfied by ProjectService
+23:09:47.598 Debug [ 1] ServiceManager: Request for service IResultService satisfied by ResultService
+23:09:47.598 Debug [ 1] ServiceManager: Request for service ITestFilterService satisfied by TestFilterService
+23:09:47.598 Debug [ 1] ServiceManager: Request for service IExtensionService satisfied by ExtensionService
+23:09:47.643 Info  [ 1] ServiceManager: Stopping DefaultTestRunnerFactory
+23:09:47.643 Info  [ 1] ServiceManager: Stopping ResultService
+23:09:47.643 Info  [ 1] ServiceManager: Stopping DriverService
+23:09:47.643 Info  [ 1] ServiceManager: Stopping TestAgency
+23:09:47.645 Info  [ 1] ServiceManager: Stopping RuntimeFrameworkService
+23:09:47.646 Info  [ 1] ServiceManager: Stopping ProjectService
+23:09:47.646 Info  [ 1] ServiceManager: Stopping ExtensionService
+23:09:47.651 Info  [ 1] ServiceManager: Stopping TestFilterService
+23:09:47.651 Info  [ 1] ServiceManager: Stopping RecentFilesService
+23:09:47.655 Info  [ 1] ServiceManager: Stopping SettingsService

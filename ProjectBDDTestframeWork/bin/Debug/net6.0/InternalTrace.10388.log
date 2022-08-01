@@ -1,0 +1,94 @@
+InternalTrace: Initializing at level Debug
+23:13:59.396 Debug [ 1] ServiceManager: Added SettingsService
+23:13:59.396 Debug [ 1] ServiceManager: Added RecentFilesService
+23:13:59.396 Debug [ 1] ServiceManager: Added TestFilterService
+23:13:59.397 Debug [ 1] ServiceManager: Added ExtensionService
+23:13:59.397 Debug [ 1] ServiceManager: Added ProjectService
+23:13:59.397 Debug [ 1] ServiceManager: Added RuntimeFrameworkService
+23:13:59.421 Debug [ 1] ServiceManager: Added TestAgency
+23:13:59.422 Debug [ 1] ServiceManager: Added DriverService
+23:13:59.422 Debug [ 1] ServiceManager: Added ResultService
+23:13:59.423 Debug [ 1] ServiceManager: Added DefaultTestRunnerFactory
+23:13:59.424 Info  [ 1] ServiceManager: Initializing SettingsService
+23:13:59.427 Info  [ 1] ServiceManager: Initializing RecentFilesService
+23:13:59.430 Debug [ 1] ServiceManager: Request for service ISettings satisfied by SettingsService
+23:13:59.431 Info  [ 1] ServiceManager: Initializing TestFilterService
+23:13:59.431 Info  [ 1] ServiceManager: Initializing ExtensionService
+23:13:59.437 Info  [ 1] ExtensionService: Scanning nunit.engine.core assembly for extension points
+23:13:59.437 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/NUnitV2Driver, Type=NUnit.Engine.Extensibility.IFrameworkDriver
+23:13:59.446 Info  [ 1] ExtensionService: Scanning nunit.engine.api assembly for extension points
+23:13:59.446 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IService, Type=NUnit.Engine.IService
+23:13:59.446 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/ITestEventListener, Type=NUnit.Engine.ITestEventListener
+23:13:59.446 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IDriverFactory, Type=NUnit.Engine.Extensibility.IDriverFactory
+23:13:59.446 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IProjectLoader, Type=NUnit.Engine.Extensibility.IProjectLoader
+23:13:59.446 Info  [ 1] ExtensionService:   Found Path=/NUnit/Engine/TypeExtensions/IResultWriter, Type=NUnit.Engine.Extensibility.IResultWriter
+23:13:59.454 Info  [ 1] ExtensionService: Processing file C:\Program Files (x86)\NUnit.org\nunit-console\nunit.bundle.addins
+23:13:59.586 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\nunit.v2.driver.dll for Extensions
+23:13:59.609 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type NUnit2FrameworkDriver
+23:13:59.622 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\nunit-v2-result-writer.dll for Extensions
+23:13:59.623 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type NUnit2XmlResultWriter
+23:13:59.628 Info  [ 1] ExtensionService:         ExtensionProperty Format = nunit2
+23:13:59.628 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\nunit-project-loader.dll for Extensions
+23:13:59.629 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type NUnitProjectLoader
+23:13:59.630 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .nunit
+23:13:59.630 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\vs-project-loader.dll for Extensions
+23:13:59.631 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type VisualStudioProjectLoader
+23:13:59.631 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .sln
+23:13:59.631 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .csproj
+23:13:59.631 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .vbproj
+23:13:59.631 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .vjsproj
+23:13:59.631 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .vcproj
+23:13:59.631 Info  [ 1] ExtensionService:         ExtensionProperty FileExtension = .fsproj
+23:13:59.631 Info  [ 1] ExtensionService: Scanning C:\Program Files (x86)\NUnit.org\nunit-console\addins\teamcity-event-listener.dll for Extensions
+23:13:59.638 Info  [ 1] ExtensionService:   Found ExtensionAttribute on Type TeamCityEventListener
+23:13:59.638 Info  [ 1] ServiceManager: Initializing ProjectService
+23:13:59.641 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:13:59.644 Info  [ 1] ServiceManager: Initializing RuntimeFrameworkService
+23:13:59.644 Info  [ 1] ServiceManager: Initializing TestAgency
+23:13:59.645 Debug [ 1] ServiceManager: Request for service IRuntimeFrameworkService satisfied by RuntimeFrameworkService
+23:13:59.659 Info  [ 1] ServiceManager: Initializing DriverService
+23:13:59.662 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:13:59.664 Info  [ 1] ServiceManager: Initializing ResultService
+23:13:59.665 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:13:59.665 Info  [ 1] ServiceManager: Initializing DefaultTestRunnerFactory
+23:13:59.665 Debug [ 1] ServiceManager: Request for service IProjectService satisfied by ProjectService
+23:13:59.665 Debug [ 1] ServiceManager: Request for service IResultService satisfied by ResultService
+23:13:59.665 Debug [ 1] ServiceManager: Request for service ITestFilterService satisfied by TestFilterService
+23:13:59.666 Debug [ 1] ServiceManager: Request for service IExtensionService satisfied by ExtensionService
+23:13:59.705 Debug [ 1] ServiceManager: Request for service IProjectService satisfied by ProjectService
+23:13:59.705 Debug [ 1] ServiceManager: Request for service ITestRunnerFactory satisfied by DefaultTestRunnerFactory
+23:13:59.705 Debug [ 1] ServiceManager: Request for service IRuntimeFrameworkService satisfied by RuntimeFrameworkService
+23:13:59.705 Debug [ 1] ServiceManager: Request for service ExtensionService satisfied by ExtensionService
+23:13:59.734 Debug [ 1] RuntimeFrameworkService: Assembly C:\Users\Thirumala_Rajolu\source\git\Repos\specflowsaucedemoproject\ProjectBDDTestframeWork\bin\Debug\net6.0\ProjectBDDTestframeWork.dll uses version 4.0.30319
+23:13:59.735 Debug [ 1] RuntimeFrameworkService: Assembly C:\Users\Thirumala_Rajolu\source\git\Repos\specflowsaucedemoproject\ProjectBDDTestframeWork\bin\Debug\net6.0\ProjectBDDTestframeWork.dll targets .NETCoreApp,Version=v6.0
+23:13:59.744 Debug [ 1] RuntimeFrameworkService: Current framework is net-4.5
+23:13:59.744 Debug [ 1] RuntimeFrameworkService: No specific framework requested for ProjectBDDTestframeWork.dll
+23:13:59.749 Debug [ 1] RuntimeFrameworkService: Test will use netcore-6.0 for ProjectBDDTestframeWork.dll
+23:13:59.749 Debug [ 1] RuntimeFrameworkService: Current framework is net-4.5
+23:13:59.749 Debug [ 1] RuntimeFrameworkService: No specific framework requested for 
+23:13:59.749 Debug [ 1] RuntimeFrameworkService: Test will use netcore-6.0 for 
+23:13:59.754 Debug [ 1] ServiceManager: Request for service ITestRunnerFactory satisfied by DefaultTestRunnerFactory
+23:13:59.754 Debug [ 1] ServiceManager: Request for service TestAgency satisfied by TestAgency
+23:13:59.755 Info  [ 1] ProcessRunner: Running 
+23:13:59.774 Debug [ 1] AgentProcess: TargetRuntime = netcore-6.0
+23:13:59.780 Debug [ 1] AgentProcess: GetTestAgentExePath(netcore-6.0, False)
+23:13:59.781 Debug [ 1] AgentProcess: Checking for agents at C:\Program Files (x86)\NUnit.org\nunit-console\agents
+23:13:59.781 Debug [ 1] AgentProcess: Using nunit-agent at C:\Program Files (x86)\NUnit.org\nunit-console\agents\net6.0\nunit-agent.dll
+23:13:59.799 Debug [ 1] TestAgency: Launched Agent process 12840 - see nunit-agent_12840.log
+23:13:59.799 Debug [ 1] TestAgency: Command line: "dotnet" C:\Program Files (x86)\NUnit.org\nunit-console\agents\net6.0\nunit-agent.dll 8a9427d5-ff6c-4e72-b350-7b3a83eb78bf 127.0.0.1:52612 --pid=10388 --trace=Verbose --work=C:\Users\Thirumala_Rajolu\source\git\Repos\specflowsaucedemoproject\ProjectBDDTestframeWork\bin\Debug\net6.0
+23:13:59.807 Debug [ 1] TestAgency: Waiting for agent {8a9427d5-ff6c-4e72-b350-7b3a83eb78bf} to register
+23:14:00.436 Error [ 1] ProcessRunner: Failed to run remote tests --NUnitEngineException
+Unable to acquire remote process agent
+   at NUnit.Engine.Runners.ProcessRunner.CreateAgentAndRunnerIfNeeded()
+   at NUnit.Engine.Runners.ProcessRunner.RunTests(ITestEventListener listener, TestFilter filter)
+
+23:14:00.514 Info  [ 1] ServiceManager: Stopping DefaultTestRunnerFactory
+23:14:00.514 Info  [ 1] ServiceManager: Stopping ResultService
+23:14:00.515 Info  [ 1] ServiceManager: Stopping DriverService
+23:14:00.515 Info  [ 1] ServiceManager: Stopping TestAgency
+23:14:00.517 Info  [ 1] ServiceManager: Stopping RuntimeFrameworkService
+23:14:00.517 Info  [ 1] ServiceManager: Stopping ProjectService
+23:14:00.517 Info  [ 1] ServiceManager: Stopping ExtensionService
+23:14:00.518 Info  [ 1] ServiceManager: Stopping TestFilterService
+23:14:00.518 Info  [ 1] ServiceManager: Stopping RecentFilesService
+23:14:00.522 Info  [ 1] ServiceManager: Stopping SettingsService
