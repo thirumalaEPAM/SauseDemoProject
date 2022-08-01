@@ -20,11 +20,11 @@
 ###### Browsers
    - Chrome Driver
 ## 02 - Test Scenarios
--Scenario 1 : Verify user can login into saucedemo page or not
--Scenario 2 : Verify user Remove Product from cart
--Scenario 3 : Successful Login with Valid Credentials
--Scenario 4 : Verify Item Name and Price
-
+- Scenario 1 : Verify user can login into saucedemo page or not
+- Scenario 2 : Verify user can Remove Product from cart
+- Scenario 3 : Successful Login with Multiple Valid Credentials
+- Scenario 4 : Verify the Item and Price on chekout page and validate the successful order
+- 
  ## 03 - Brief Description about framework Approach
  - Reports created using ExtentReports and ScreenShots captured for failed scenarios
  
