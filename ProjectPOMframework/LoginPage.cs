@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace ProjectPOMframework
 {
     public class LoginPage
-    {      
+    {
 
-        public By elementUsename = By.Id("user-name");
-        public By elementPassword = By.Id("password");
-        public By elementLogin = By.Id("login-button");
+        public static By elementUsename = By.Id("user-name");
+        public static By elementPassword = By.Id("password");
+        public static By elementLogin = By.Id("login-button");
 
-      
+
     }
 }

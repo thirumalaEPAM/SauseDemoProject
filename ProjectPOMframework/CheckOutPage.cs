@@ -9,12 +9,12 @@ namespace ProjectPOMframework
 {
     public class CheckOutPage
     {
-        public By elementContinueShipping = By.Id("continue-shopping");
-        public By elementFirstName = By.Id("first-name");
-        public By elementLastName = By.Name("lastName");
-        public By elementZipCode = By.Name("postalCode");
-        public By elementContinueBtn = By.Id("continue");
-        public By elementFinish = By.Id("finish");
-        public By elementCompleteOrder = By.XPath("//h2[@class='complete-header']");
+        public static By elementContinueShipping = By.Id("continue-shopping");
+        public static By elementFirstName = By.Id("first-name");
+        public static By elementLastName = By.Name("lastName");
+        public static By elementZipCode = By.Name("postalCode");
+        public static By elementContinueBtn = By.Id("continue");
+        public static By elementFinish = By.Id("finish");
+        public static By elementCompleteOrder = By.XPath("//h2[@class='complete-header']");
     }
 }

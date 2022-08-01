@@ -18,14 +18,22 @@ namespace ProjectBDDTestframeWork
         private static AventStack.ExtentReports.ExtentReports extent;
         private static ExtentTest Feature;
         private static ExtentTest Sceanrio;
-       static  HelperClass help;
+        public static HelperClass help;
+        public static LoginHelper loginHelper;
+        public static ProductsHelper productsHelper;
+        public static CheckoutHelper checkoutHelper;
+
 
         [BeforeScenario]
         public void FirstBeforeScenario()
-        {   
+        {
             SingletonBaseClass.setSingletonInstanceNull();
-            driver =SingletonBaseClass.getDriverInstance().getDriver();                      
+            driver = SingletonBaseClass.getDriverInstance().getDriver();
             SingletonBaseClass.getDriverInstance().launchBrowser();
+            help = new HelperClass(driver);
+            loginHelper = new LoginHelper(driver);
+            productsHelper = new ProductsHelper(driver);
+            checkoutHelper = new CheckoutHelper(driver);
             Sceanrio = Feature.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
         }
         [BeforeTestRun]

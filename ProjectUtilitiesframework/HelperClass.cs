@@ -11,38 +11,15 @@ namespace ProjectUtilitiesframework
     public class HelperClass
     {
         #region AllPages Instantiation
-        Utitlities ob;
-        LoginPage loginPage;
-        ProductsPage productsPage;
-        CheckOutPage checkOutPage;
-        MyCartPage myCartPage;
+        Utitlities ob;       
         #endregion
         IWebDriver webdriver;
-        
-        public void ButtonClick(String buttonName)
+
+        public void ButtonClick(By by)
         {
-            ob = new Utitlities(webdriver);
-            loginPage = new LoginPage();
-            checkOutPage = new CheckOutPage();
-            myCartPage = new MyCartPage();
-            productsPage = new ProductsPage();
-            if (buttonName == Constants.Login)
-                ob.ClickElement(loginPage.elementLogin);
-
-            else if (buttonName == Constants.Addcart) { ob.ClickElement(productsPage.elementAddCart); }
-            else if (buttonName == Constants.shipping) { ob.ClickElement(myCartPage.elementShippingCart); }
-            else if (buttonName == Constants.checkout) { ob.ClickElement(myCartPage.elementCheckOut); }
-            else if (buttonName == Constants.Continue) { ob.ClickElement(checkOutPage.elementContinueBtn); }
-            else if(buttonName==Constants.remove) { ob.ClickElement(productsPage.elementRemoveCart); }
-            else if (buttonName ==Constants.finish)
-            {
-                ob.pageScroll(checkOutPage.elementFinish);
-                ob.ClickElement(checkOutPage.elementFinish);
-            }
-            else { Console.WriteLine("button not existed"); }
-
+            ob.ClickElement(by);
         }
-       
+
         public int RondomNum()
         {
 
@@ -50,18 +27,16 @@ namespace ProjectUtilitiesframework
 
             return rnd.Next(200, 1000);
         }
-        public String getText(string text)
+        /// <summary>
+        /// Get the Web Element Text
+        /// </summary>
+        /// <param name="locator"></param>
+        /// <returns></returns>
+        public string GetText(By by)
         {
-             ob = new Utitlities(webdriver);
-            productsPage = new ProductsPage();
-             checkOutPage = new CheckOutPage();
-            if (text == Constants.remove)
-                return ob.getElementText(productsPage.elementRemoveCart);           
-            else if (text == Constants.Itemprice) { return ob.getElementText(productsPage.elementItemPrice); }
-            else if (text == Constants.ItemName) { return ob.getElementText(productsPage.elementItemName); }
-            else if (text == Constants.addcart) { return ob.getElementText(productsPage.elementAddCart); }
-            else { return ob.getElementText(checkOutPage.elementCompleteOrder); }
-        }    
+            try { return ob.getElementText(by); }
+            catch { return "NotMatch"; }
+        }
         public String TakeScreenshot()
         {
             Screenshot screenshot = ((ITakesScreenshot)webdriver).GetScreenshot();
@@ -75,6 +50,7 @@ namespace ProjectUtilitiesframework
         public HelperClass(IWebDriver driver)
         {
             this.webdriver = driver;
+            ob = new Utitlities(webdriver);
         }
     }
 }

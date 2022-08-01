@@ -10,21 +10,20 @@ namespace ProjectUtilitiesframework
 {
     public class CheckoutHelper
     {
-        CheckOutPage checkOutPage;
         IWebDriver webdriver;
         Utitlities ob;
         public void userDetailsEntry()
-        {
-            ob = new Utitlities(webdriver);
-            checkOutPage = new CheckOutPage();
-            ob.SendText(checkOutPage.elementFirstName, Constants.userFirstName);
-            ob.SendText(checkOutPage.elementLastName, Constants.lastName);
-            ob.SendText(checkOutPage.elementZipCode, Constants.pin);
+        {           
+           
+            ob.SendText(CheckOutPage.elementFirstName, Constants.userFirstName);
+            ob.SendText(CheckOutPage.elementLastName, Constants.lastName);
+            ob.SendText(CheckOutPage.elementZipCode, Constants.pin);
         }
 
         public CheckoutHelper(IWebDriver driver)
         {
             this.webdriver = driver;
+            ob = new Utitlities(webdriver);
         }
     }
 }

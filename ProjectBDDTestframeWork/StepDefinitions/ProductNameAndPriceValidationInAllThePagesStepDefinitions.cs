@@ -10,36 +10,30 @@ namespace ProjectBDDTestframeWork.StepDefinitions
     public class ProductNameAndPriceValidationInAllThePagesStepDefinitions
     {
 
-        HelperClass help;
-        ProductsHelper productsHelper;
-        CheckoutHelper  checkoutHelper;
+     
         String ItemPrice;
         String Itemname;
         [Then(@"Add First product to Cart")]
         public void ThenAddFirstProductToCart()
         {
-            help = new HelperClass(BddHooks.driver);
-            help.ButtonClick(Constants.Addcart);
-            Itemname = help.getText(Constants.ItemName);
-            ItemPrice = help.getText(Constants.Itemprice);
-            Assert.AreEqual(Constants.remove.ToLower(), help.getText(Constants.remove).ToLower());
+            BddHooks.help.ButtonClick(ProductsPage.elementAddCart);
+            Itemname = BddHooks.help.GetText(ProductsPage.elementItemName);
+            ItemPrice = BddHooks.help.GetText(ProductsPage.elementItemPrice);
+            Assert.AreEqual(Constants.remove.ToLower(), BddHooks.help.GetText(ProductsPage.elementRemoveCart));
         }
 
         [Then(@"Remove Product from Cart")]
         public void ThenRemoveProductFromCart()
         {
-            help = new HelperClass(BddHooks.driver);
-            help.ButtonClick(Constants.remove);
-            Assert.AreEqual(Constants.addcart.ToLower(), help.getText(Constants.addcart).ToLower());
+            BddHooks.help.ButtonClick(ProductsPage.elementRemoveCart);
+            Assert.AreEqual(Constants.addcart.ToLower(), BddHooks.help.GetText(ProductsPage.elementAddCart));
         }
 
         [Then(@"Validate the Item  and Price of product in Cart page")]
         public void ThenValidateTheItemAndPriceOfProductInCartPage()
         {
-            help = new HelperClass(BddHooks.driver);
-            help.ButtonClick(Constants.shipping);
-            String productPrice = help.getText(Constants.Itemprice);
-            String productName = help.getText(Constants.ItemName);
+            String productPrice = BddHooks.help.GetText(ProductsPage.elementItemPrice);
+            String productName = BddHooks.help.GetText(ProductsPage.elementItemName);
             Assert.AreEqual(Itemname, productName);
             Assert.AreEqual(ItemPrice, productPrice);
         }
@@ -47,20 +41,17 @@ namespace ProjectBDDTestframeWork.StepDefinitions
         [Then(@"Click on checkout and enter the sample details and click continue")]
         public void ThenClickOnCheckoutAndEnterTheSampleDetailsAndClickContinue()
         {
-            help = new HelperClass(BddHooks.driver);
-            checkoutHelper = new CheckoutHelper(BddHooks.driver);
-            help.ButtonClick(Constants.checkout);
-            checkoutHelper.userDetailsEntry();
-            help.ButtonClick(Constants.Continue);
+            BddHooks.help.ButtonClick(MyCartPage.elementCheckOut);
+            BddHooks.checkoutHelper.userDetailsEntry();
+            BddHooks.help.ButtonClick(CheckOutPage.elementContinueBtn);
         }
 
         [Then(@"Verify the Item and Price on chekout page and click finish")]
         public void ThenVerifyTheItemAndPriceOnChekoutPageAndClickFinish()
         {
-            help = new HelperClass(BddHooks.driver);
-            help.ButtonClick(Constants.finish);
+            BddHooks.help.ButtonClick(CheckOutPage.elementFinish);
             String expectedMessage = Constants.SuccessMessage;
-            String successOrder = help.getText(Constants.success);
+            String successOrder = BddHooks.help.GetText(CheckOutPage.elementCompleteOrder);
             Assert.AreEqual(expectedMessage, successOrder);
         }
     }

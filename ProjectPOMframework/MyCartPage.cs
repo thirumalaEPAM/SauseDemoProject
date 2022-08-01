@@ -10,9 +10,9 @@ namespace ProjectPOMframework
     public class MyCartPage
     {
 
-        public By elementShippingCart = By.XPath("//a[@class='shopping_cart_link']");
-        public By elementCancel = By.Id("cancel");
+        public static By elementShippingCart = By.XPath("//a[@class='shopping_cart_link']");
+        public static By elementCancel = By.Id("cancel");
         /** Checkout data**/
-        public By elementCheckOut = By.Id("checkout");
+        public static By elementCheckOut = By.Id("checkout");
     }
 }

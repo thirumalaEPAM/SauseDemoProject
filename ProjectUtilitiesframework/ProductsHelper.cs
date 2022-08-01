@@ -10,21 +10,21 @@ namespace ProjectUtilitiesframework
 {
     public class ProductsHelper
     {
-        ProductsPage productsPage;
+        
         IWebDriver webdriver;
         Utitlities ob;
 
         public Boolean Procutsavalability()
-        {
-            ob = new Utitlities(webdriver);
-            productsPage = new ProductsPage();
-            int ProductCount = ob.getNumProdcts(productsPage.elementItemName);
+        {          
+            
+            int ProductCount = ob.getNumProdcts(ProductsPage.elementItemName);
             if (ProductCount != 0) return true;
             else return false;
         }
         public ProductsHelper(IWebDriver driver)
         {
             this.webdriver = driver;
+            ob = new Utitlities(webdriver);
         }
     }
 }
